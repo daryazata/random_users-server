@@ -55,7 +55,7 @@ const userRouter = require('./routes/userRoutes');
 app.use('/api/users', userRouter);
 
 app.get('/', function (res, req) {
-  req.send(JSON.parse(cache.get('data')));
+  req.sen('Node server is running');
 });
 
 module.exports = app;
