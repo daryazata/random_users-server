@@ -1,6 +1,11 @@
 const app = require('./app');
 
-const port = 8080;
-app.listen(port, () => {
-  console.log(`App running on port ${port}...`);
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}...`);
 });
